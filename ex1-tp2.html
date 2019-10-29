@@ -1,0 +1,31 @@
+<html>
+<head>
+
+
+<style type="text/css">
+	.normal{
+		background-color: yellow;
+	}
+	.nor{
+		background-color: red;
+	}
+	div{
+		background-color: blue;
+		font-size: 2000px;
+		height: 2000px;	}
+</style>
+</head>
+<body>
+	<div id="eee"> </div>
+</body>
+
+</html>
+<script type="text/javascript">
+	const elmt=document.querySelector("#eee");
+function eventclbk(e){
+	elmt.classList.toggle("normal");
+	elmt.addEventListener("nor",eventclbk,false);
+}
+elmt.onclick = eventclbk;
+
+</script>
